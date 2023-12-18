@@ -70,11 +70,14 @@ public final class AttestationHooks {
 
     private static void spoofBuildGms() {
         // Alter model name and fingerprint to avoid hardware attestation enforcement
-        setBuildField("DEVICE", "bullhead");
-        setBuildField("FINGERPRINT", "google/bullhead/bullhead:8.0.0/OPR6.170623.013/4283548:user/release-keys");
-        setBuildField("MODEL", "Nexus 5X");
-        setBuildField("PRODUCT", "bullhead");
-        setVersionField("DEVICE_INITIAL_SDK_INT", Build.VERSION_CODES.N);
+        setBuildField("BRAND", "GIONEE");
+        setBuildField("DEVICE", "GIONEE_SW17G12");
+        setBuildField("FINGERPRINT", "GIONEE/S11S/GIONEE_SW17G12:7.1.1/N6F26Q/1509594663:user/release-keys");
+        setBuildField("MANUFACTURER", "GIONEE");
+        setBuildField("MODEL", "GIONEE S11S");
+        setBuildField("PRODUCT", "S11S");
+        setBuildField("SECURITY_PATCH", "2017-11-05");
+        setVersionField("DEVICE_INITIAL_SDK_INT", Build.VERSION_CODES.N_MR1);
     }
 
     public static void initApplicationBeforeOnCreate(Application app) {
